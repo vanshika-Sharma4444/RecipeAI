@@ -1,0 +1,33 @@
+.favourites-page {
+  padding: 48px 0 80px;
+}
+
+.favourites-header {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 36px;
+}
+
+.fav-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffedd5;
+  color: #ea580c;
+  padding: 6px 16px;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.favourites-header h1 {
+  font-size: 2.6rem;
+  margin-bottom: 12px;
+}
+
+.favourites-header p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+}
+

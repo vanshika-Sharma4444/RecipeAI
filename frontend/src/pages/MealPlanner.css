@@ -1,0 +1,193 @@
+.meal-planner-page {
+  padding: 48px 0 80px;
+}
+
+.planner-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 36px;
+}
+
+.planner-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--primary-light);
+  color: var(--primary);
+  padding: 6px 16px;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.planner-header h1 {
+  font-size: 2.6rem;
+  margin-bottom: 12px;
+}
+
+.planner-header p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+}
+
+/* 7-day grid */
+.weekly-calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 16px;
+}
+
+.day-column {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  min-width: 170px;
+  display: flex;
+  flex-direction: column;
+}
+
+.day-header {
+  padding: 14px 12px;
+  background: var(--bg-surface-alt);
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+}
+
+.day-header h3 {
+  font-size: 1rem;
+  color: var(--primary);
+}
+
+.day-slots {
+  padding: 12px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.meal-slot-card {
+  background: var(--bg-main);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-sm);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+}
+
+.slot-type-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.add-to-slot-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  padding: 12px 8px;
+  border: 1px dashed #d1c7b7;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.add-to-slot-btn:hover {
+  background: var(--primary-light);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.assigned-recipe {
+  position: relative;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid var(--border);
+}
+
+.assigned-img {
+  width: 100%;
+  height: 90px;
+  object-fit: cover;
+}
+
+.assigned-info {
+  padding: 8px;
+}
+
+.assigned-title {
+  font-size: 0.825rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.assigned-title a {
+  color: var(--primary);
+}
+
+.assigned-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.72rem;
+  color: var(--text-light);
+}
+
+.assigned-time {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.assigned-cal {
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.remove-slot-btn {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(4px);
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.remove-slot-btn:hover {
+  background: #dc2626;
+}
+
+@media (max-width: 1100px) {
+  .weekly-calendar-grid {
+    grid-template-columns: repeat(7, 200px);
+  }
+}
+
